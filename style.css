@@ -1,0 +1,284 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Gill Sans', 'Calibri', 'Trebuchet MS', sans-serif;
+	background-color: #e7eff7;
+	color: #1b1b0d;
+	margin: 0;
+	padding: 0;
+}
+
+::selection {
+	color: #8a5e00;
+	background: rgb(37, 56, 142, 0.3);
+}
+
+
+
+/* HEADER STUFF */
+.top-banner {
+	background-color: #24388a;
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.top-banner h1 {
+	padding: 0 30px;
+}
+
+#top-img {
+	max-width: 200px;
+	float: right;
+}
+
+#nav-container {
+	padding: 10px 16px;
+	background: #4358ad;
+	color: #f1f1f1;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#nav-dropdown {
+	padding: 10px;
+}
+
+#nav-dropdown-list {
+	position: absolute;
+	background-color: #f9f9f9;
+	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+	z-index: 1;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+
+/* OTHER THINGS */
+/*Define links in this order:*/
+a:link {
+	color: #0f8299;
+	text-underline-offset: 4px;
+}
+
+a:visited {
+	color: #2e3757;
+}
+
+a:hover {
+	color: #15b79c;
+	text-underline-offset: 1px;
+}
+
+a:active {
+	color: #633196;
+}
+
+#main-content {
+	padding: 15px 20px;
+}
+
+.smooth-nav-transition {
+	margin-top: 100px;
+}
+
+/*Put for testing scroll*/
+/* #quiz-option-4 {
+	padding-bottom: 1000px;
+} */
+
+/* OTHER THINGS - JS class-adders */
+
+.dark-mode {
+	background-color: #002841;
+	color: #e7eff7;
+}
+
+.show-rest {
+	display: none;
+}
+
+/* OTHER THINGS - JS class-adders END */
+
+/*Intro Stuff*/
+.introducton {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/* margin: 15px 5px ; */
+	/* padding: 5px 25px; */
+}
+
+#disclamer {
+	margin: 20px;
+	padding: 20px;
+	background-color: #f9f9f9;
+	text-align: center;
+	border: none;
+	border-radius: 30px;
+}
+
+#intro-left img {
+	padding: 10px;
+	border: 1px solid cornflowerblue;
+	/*for seeing*/
+	flex: 1;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+#intro-text {
+	padding: 0 20px;
+	border: 1px solid cornflowerblue;
+	/*for seeing*/
+	flex: 1;
+}
+
+/*Stats Stuff*/
+.main-stat-container {
+	text-align: center;
+}
+
+#stats-big {
+	margin: 15px 5px;
+	border: 1px solid cornflowerblue;
+	/*for seeing*/
+	padding: 10px 40px;
+	background-color: #ffffff;
+}
+
+#stats-breakdown {
+	display: none;
+}
+
+.emphizise {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+/* Quiz stuff*/
+.quiz-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#quiz-question-container {
+	padding: 10px;
+	border: 1px solid cornflowerblue;
+	/*for seeing*/
+	background-color: #ffffff;
+	justify-content: space-between;
+	flex: 2;
+}
+
+/* #quiz-img img{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: content
+} */
+
+#quiz-choices {
+	flex-direction: column;
+	/* margin: 0 3rem; */
+	flex: 1;
+}
+
+#quiz-choices button {
+	width: 100%;
+	height: 25%;
+}
+
+
+/* !! BUTTONS !! */
+button {
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	padding: 10px 15px;
+}
+
+.dropdown-button-styling {
+	background-color: purple;
+	color: #efef99;
+	border: 1px solid #1014ad;
+}
+
+.dropdown-button-styling:hover {
+	background-color: rgb(80, 0, 80);
+	cursor: pointer;
+}
+
+/* quiz button styling */
+.quiz-button-styling {
+	background-color: #ffe;
+	border-radius: 1px;
+	transition: all 0.2s ease;
+}
+
+.quiz-button-styling:hover {
+	background-color: #33ddcd;
+	cursor: pointer;
+}
+
+/* !! BUTTONS - END !! */
+
+/* FOR SEEING SECION - DO WILL REMOVE LATER */
+
+/* INTRODUCTIONS */
+.introducton {
+	border: 3px dashed red;
+	/*for seeing*/
+}
+
+
+/* STATISITICS AREA */
+.main-stat-container {
+	border: 3px dashed blue;
+	/*for seeing*/
+}
+
+
+/* QUIZ THINGS */
+.quiz-container {
+	border: 3px dashed green;
+	/*for seeing*/
+}
+
+/* FOR SEEING SECION - END */
+
+
+/* div {
+	display: flow-root;
+	padding: 25px;
+} */
+
+img {
+	min-width: 200px;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain
+}
+
+/* .left-side {
+	float: left;
+	/* padding-right: 3rem; 
+} */
