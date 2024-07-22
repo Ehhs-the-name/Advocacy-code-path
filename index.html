@@ -7,7 +7,7 @@
   <title>Support Mental Health</title>
 
   <!-- flaticon -->
-  <link rel="icon" href="https://images.vexels.com/media/users/3/252016/isolated/lists/16524027ec6ed72507a50aada309252d-pink-human-brain-color-stroke.png">
+  <link rel="icon" href="./assets/brainFlav.png">
 
   <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -28,36 +28,32 @@
     </div>
 
     <!-- Navigaton in sticky header -->
-    <div class="sticky" id="nav-container">
+    <div class="nav-container sticky" id="nav-container">
       <!-- <div id="nav-container"> -->
-      <p style="color: #87dfdf; font-weight: 500; text-align: center; font-size: 24px;">Suicide Prevention Resources</p>
+      <p>Suicide Prevention Resources</p>
       <nav id="nav-dropdown">
-        <button onclick="showRest(this)" class="dropdown-button-styling" id="head-drop-button" type="button">V (dropdown
-          arrow) V</button>
-        <div class="breakdown" id="nav-dropdown-list">
-          <ul>
-            <li><a href="#stats-container-id">Statistics</a></li>
-            <li><a href="#quiz-question-container">Questions</a></li>
-            <li><a href="#">See more?</a></li>
-          </ul>
-        </div>
+        <a href="#stats-container-id">Statistics</a>
+        <a href="#quiz-question-container">Questions</a>
+        <a href="#signature-form">Help a friend</a>
       </nav>
-       <button id="theme-button">Toggle Dark Mode</button>
-
+      <button id="theme-button">Toggle Dark Mode</button>
   </header>
 
 
   <!-- START OF MAIN CONTENT -->
-  <div id="main-content">
+  <div class="main-content" id="main-content">
 
     <!-- Introduction -->
-      <div class="emphizise" id="disclamer">
-        <p>If you or someone you know is in a crisis, please don't hesitate to reach either of following resources:</p>
-        </p><u>988</u> or <u>800-273-8255</u></p>
-      </div>
+    <div class="disclamer emphizise" id="disclamer">
+      <p>If you or someone you know is in a crisis, please don't hesitate to reach either of following resources:</p>
+      </p><u>988</u> or <u>800-273-8255</u></p>
+    </div>
     <div class="introducton">
       <div id="intro-left">
-        <img alt="Filler image for now" src="https://www.nimh.nih.gov/sites/default/files/images/2022_5ActionSteps.jpg">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pLdGC6uxf6A?si=XLIC8Pn84hiDVYQH"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div id="intro-text">
@@ -65,22 +61,17 @@
           years old. –<a
             href="https://www.aacap.org/AACAP/Policy_Statements/2022/AACAP_Policy_Statement_Increased_Suicide_Among_Black_Youth_US.aspx"
             target="_blank">AACAP</a></blockquote>
-
         <p>Adolecence and young adults are some of the most aflicted with mental health issues. As these are the people
-          of the future, it's important to help them seek guidance towards a healthy way of living. If you know someone
-          might need help, do not hesitate to reach out. Below are differnent statisitics and ways to reach out.</p>
-        <!-- was filler: <p>
-          Bare bones webpage for right now
-        , but if you know anyone who needs to
-          <a href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox">get help</a> please
-          refer them to the link.
-        </p> -->
+          of the future, it's important to help them seek guidance towards a healthy way of living. Young people part of
+          marignalised communites, like the LGBTQ+ and racial identies, are even more at risk having mental health
+          issues. If you know someone might need help, do not hesitate to reach out. Below are differnent statisitics
+          for BIPOC and LGBTQ+ youth and ways to reach out.</p>
       </div>
     </div>
 
     <!-- All of statisitcs -->
     <div class="main-stat-container" id="stats-container-id">
-      <div id="stats-big">
+      <div class="stats-big" id="stats-big">
         <p>Black transgender and nonbinary young people report disproportionate rates of suicide risk—<br><span
             class="emphizise">with 58% seriously considering suicide and 1 in 4 (25%) attempting suicide in the past
             year.</span></p>
@@ -89,35 +80,92 @@
             href="https://www.thetrevorproject.org/resources/article/facts-about-lgbtq-youth-suicide/#:~:text=In%20particular%2C%20Black%20transgender%20and%20nonbinary%20young%20people%20report%20disproportionate%20rates%20of%20suicide%20risk%20%E2%80%94%20with%2058%25%20seriously%20considering%20suicide%20and%201%20in%204%20(25%25)%20attempting%20suicide%20in%20the%20past%20year.%C2%A0"
             target="_blank">Trevor Project</a></blockquote>
       </div>
-      <button type="button" class="dropdown-button-styling breakdown" id="stats-drop-button">
-        V (dropdown arrow) V
-      </button>
+      <button type="button" class="dropdown-button-styling breakdown" id="stats-drop-button">See more</button>
     </div>
     <div class="stat-container" id="stats-breakdown">
       <ul>
-        <li>I am a statistic!</li>
-        <li>I am a statistic too!</li>
+        <li>LGBTQ+ youth are 4x more likely to attempt suicide than their peers.</li>
+        <li>The Trevor Project's 2023 survey found that 41% of LGBTQ+ youth have seriously considered suicide, about
+          half were trans and nonbinary.</li>
+        <li>The Trevor Poject's analysis of CDC data found:</li>
+        <ul>
+          <li>48% of Bi people considered while 27% attempted.</li>
+          <li>37% of Lesbian/Gay people considered while 19% attempted.</li>
+          <li>14% of Straight people considered while 6% attempted.</li>
+        </ul>
+        <li>2020 peer-reviewed study found that trans and non-binary youth were 2 to 2.5 times more likely to experience
+          serious contemplation of suicide compared to cisgender LGBQ+ peers.</li>
+        <li>A 2023 survey found that almost all LGBTQ+ youth that had BIPOC identities reported higher suicide attempt
+          rates than their peers.</li>
+        <ul>
+          <li>Indigenous youth who are two spirit/LGBTQ+ consistently report the hiest suicide risk rate.</li>
+        </ul>
+        <li>Some Risk factors for suicide in LGBTQ+ youth:</li>
+        <ul>
+          <li>Minority Stress: where anti-LGBTQ+ messages become internalized.</li>
+          <ul>
+            <li>Examples include experiencing the following due to identity: Housing instabilities, physical harm,
+              identity change attempts by parents via conversation camps and the like.</li>
+          </ul>
+        </ul>
+        <li>Some preventive factors for LGBTQ+ youth suicide:</li>
+        <ul>
+          <li> Identity-affirming spaces like homes and schools consistently lower suicide attempt rates for LGBTQ+
+            youth.</li>
+          <li>Trusted adults and supportive peers have led to reports of higher self-esteem in LGBTQ+ youth.</li>
+        </ul>
+
+        <li>An article on Pew Trust gives 3 strategies for combating the fact that from 2007 to 2020 the suicide rate
+          for black youth has risen 144%.</li>
+        <li>The 3 stratigies:</li>
+        <ul>
+          <li>Increase healthcare providers' understanding of the cultures they provide care to.</li>
+          <li>Research risk factors focusing on different minority identities.</li>
+          <ul>
+            <li>Research shows that black youth show symptoms of depression (a suicide risk factor) differently than
+              white peers.</li>
+            <ul>
+              <li>Aggression and irritability present more for depression than sadness and a lack of interest in things.
+              </li>
+              <li>All relates to distrust of healthcare professionals due to centuries of exploration and abuse.</li>
+            </ul>
+            <li>Diagnostic criteria being created primarily around white people leads to misclassification and
+              inappropriate medical responses, increasing someone's suicide risk.</li>
+          </ul>
+          <li>Black youth are often misdiagnosed when they experience suicidal tendencies.</li>
+          <ul>
+            <li>Still, less than 50% of youth go on outpatient after being in the ER for self-harm, and it's less for
+              Black youth.</li>
+          </ul>
+        </ul>
+        <li>Due to a 2019 report to Congress, funding for the study of suicide risk and preventive factors, like stigma
+          and connectedness of communities, has increased.</li>
+
+        Points on the statistics on black youth and 3 strategies to counter suicide rates rising in the black youth
+        populous can apply to other races too. One of the reasons Two-Spirit Indigenous youth might be facing the
+        highest suicide risk rates is because of the intersections of minority stress they face and the lack of specific
+        research into their situation.
+
       </ul>
     </div>
     <!-- Quiz Section -->
     <div class="quiz-container">
-      <div id="quiz-question-container">
+      <div class="quiz-question-container" id="quiz-question-container">
         <div id="quiz-img">
           <!-- I want an image to change per question -->
-          <iframe max-width="1120" max-height="630"
-            src="https://www.youtube-nocookie.com/embed/i7eE5G5Baps?si=zyeijWDt59-uwmFn" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <img alt="Image listing the 5 Action steps for suicide prevention" src="./assets/ActionSteps.jpg">
+
         </div>
-        <p>Pretend this video is an empty div for an image and a question to answer. Think, Buzzfeed quiz, but
-          serious.<br><br>This will probably just be a blank one until I can fill in either a dictionary with questions
-          and answers or something like that. Idk yet. There's probably a better way to do it. OHHHH but like I do that
-          then I could have a like, high score thing on the page, or is that too much? I'm loosing track of this project
+        <p>
+          Pretend this video is an empty div for an image and a question to answer. Think, Buzzfeed quiz, but
+          serious.<br><br>This will probably just be a blank one until I can fill in either a dictionary with
+          questionsand answers or something like that. Idk yet. There's probably a better way to do it. OHHHHbut like I
+          do thatthen I could have a like, high score thing on the page, or is that too much? I'm loosing track of this
+          project
         </p>
       </div>
 
-      <div id="quiz-choices">
+      <div class="quiz-choices" id="quiz-choices">
         <button type="button" class="quiz-button-styling" id="quiz-option-1">A</button>
         <button type="button" class="quiz-button-styling" id="quiz-option-2">B</button>
         <button type="button" class="quiz-button-styling" id="quiz-option-3">C</button>
@@ -128,34 +176,33 @@
 
     </div>
 
-    <div>
+    <div class="form-holder" id="form-holder">
       <h1>Commit to helping a loved one!</h1>
       <p></p>
 
-        <form id="signature-form">
-          <!-- First Name -->
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname" placeholder="Give first name" required>
+      <form id="signature-form">
+        <!-- First Name -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Give first name" required>
 
-          <!-- Last Name -->
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname" placeholder="Give Last Name" required>
+        <!-- Last Name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Give Last Name" required>
 
-          <!-- Email // Song -->
-          <label for="email-box">Email:</label>
-          <input type="text" id="email-box" name="email" placeholder="Type Email" required>
+        <!-- Email // Song -->
+        <label for="email-box">Email:</label>
+        <input type="text" id="email-box" name="email" placeholder="Type Email" required>
 
-          <!-- Submit-->
-          <button type="submit">Commit to helping</button>
+        <!-- Submit-->
+        <button type="submit">Commit to helping</button>
 
-        </form>
-
-      <div id="signatures">
-        <h3>Submitted signatures: </h3>
-        <div id="counter"></div>
-      </div>
+      </form>
     </div>
 
+    <div class="signature-class" id="signatures">
+      <h3>Submitted signatures: </h3>
+      <div id="counter"></div>
+    </div>
 
     <script src="index.js"></script>
 

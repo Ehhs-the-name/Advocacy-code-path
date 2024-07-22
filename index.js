@@ -7,6 +7,7 @@ var bannerHeight = document.getElementById('banner').offsetHeight;
 const mainContentContainer = document.getElementById("main-content");
 var sticky = header.offsetTop;
 
+console.log(mainContentContainer);
 
 function myFunction() {
 	if (window.scrollY > sticky + bannerHeight) {
@@ -22,37 +23,16 @@ function myFunction() {
 
 
 // button "show more" code
-let dropdown = document.getElementById("nav-dropdown-list");
-// let statDrop = document.getElementById("stats-breakdown");
+// It works now :)
+let dropdown = document.getElementById("stats-drop-button");
 
-// right now it only shows the extra
 let showRest = () => {
-	let breakDown = document.getElementsByClassName("breakdown");
-	breakDown.toggle("show-rest");
+	let breakDown = document.getElementById("stats-breakdown");
+	breakDown.classList.toggle("show-rest");
+	console.log("button clicked!!");
 }
 
 dropdown.addEventListener("click", showRest);
-
-//GPT code for button, will work off of it
-
-// function toggleDropdown(button) {
-// 	var dropdownMenu = button.nextElementSibling;
-// 	dropdownMenu.classList.toggle('show');
-// }
-
-// // Close the dropdown menu if the user clicks outside of it
-// window.onclick = function(event) {
-// 	if (!event.target.matches('.dropdown button')) {
-// 			var dropdowns = document.getElementsByClassName("dropdown-menu");
-// 			for (var i = 0; i < dropdowns.length; i++) {
-// 					var openDropdown = dropdowns[i];
-// 					if (openDropdown.classList.contains('show')) {
-// 							openDropdown.classList.remove('show');
-// 					}
-// 			}
-// 	}
-// }
-
 
 
 // Dark Mode code
@@ -60,23 +40,34 @@ let themeButton = document.getElementById("theme-button");
 
 const toggleDarkMode = () => {
 	document.body.classList.toggle("dark-mode");
-	
+
 	// not working yet 
-	let topBanner = getElementByClassName("top-banner");
-	let navContainer = getElementById("nav-container");
+	let topBanner = document.getElementById("banner");
+	let navContainer = document.getElementById("nav-container");
+	let disclamer = document.getElementById("disclamer");
+	let statBig = document.getElementById("stats-big");
+	let quizQuestionContainer = document.getElementById("quiz-question-container");
 	
+	let buttons = document.querySelectorAll("button");
 	
-	// let partsBGs = [topBanner, item2, ...];
-	document.getElementById("disclamer");
-	partsBGs.classList.toggle("dark-mode");
+	topBanner.classList.toggle("dark-mode-extra");
+	navContainer.classList.toggle("nav-container-dark");
+	disclamer.classList.toggle("dark-mode-extra");
+	statBig.classList.toggle("dark-mode-extra");
+	quizQuestionContainer.classList.toggle("dark-mode-extra");
+	
+	console.log(buttons.innerHTML);
+	buttons.forEach(button => {
+button.classList.toggle("button-dark");
+	});
+	
 }
 
 themeButton.addEventListener("click", toggleDarkMode);
 
 
-
-
 // Form Code 
+// Still need to check email validation
 const submitRequest = (event) => {
 	event.preventDefault();
 
@@ -85,6 +76,8 @@ const submitRequest = (event) => {
 	const email = document.getElementById("email-box").value;
 
 	const cFName = fName.charAt(0).toUpperCase() + fName.slice(1);
+
+
 	const cLName = lName.charAt(0).toUpperCase() + lName.slice(1);
 
 	console.log(`${fName} ${lName} @ ${email} has signed the form!`);
