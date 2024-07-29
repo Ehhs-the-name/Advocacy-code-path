@@ -17,6 +17,67 @@ body {
 }
 
 
+/* OTHER THINGS - JS class-adders */
+.dark-mode {
+	background-color: #002841;
+	color: #e7eff7;
+}
+
+
+
+.dark-mode-extra a:visited {
+	color: #76748b;
+}
+
+.dark-mode-extra a:hover {
+	color: #5cada0;
+	text-underline-offset: 1px;
+}
+
+.dark-mode-extra a:active {
+	color: #633196;
+}
+
+.nav-container-dark {
+	background: #0a0e1c;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #bde5e5;
+	font-weight: 500;
+	font-size: 24px;
+	padding: 0 16px;
+}
+
+.nav-container-dark a {
+	color: #62b4f3;
+	text-decoration: none;
+	padding: 2px 5px;
+	border-bottom: #c0daf3 2px solid;
+}
+
+.nav-container-dark a:hover {
+	color: #85949d;
+	text-decoration: none;
+	border-bottom: #003261 2px solid;
+}
+
+.button-dark {
+	background-color: #221943;
+	color: #e7eff7;
+	border: 1px solid #3a305f;
+}
+
+.button-dark:hover {
+	background-color: #554c2b;
+	color: #dbdbdb;
+}
+
+.button-dark:active {
+	background-color: #1d867b;
+}
+
+/* OTHER THINGS - JS class-adders END */
 
 /* HEADER STUFF */
 .top-banner {
@@ -176,8 +237,13 @@ ul {
 	margin-bottom: 1.5rem;
 }
 
+
 .stat-container {
 	display: none;
+}
+
+.show-rest {
+	display: block;
 }
 
 .emphizise {
@@ -272,6 +338,10 @@ button:active {
 
 /* !! BUTTONS - END !! */
 
+.dark-mode-extra {
+	background-color: #2a2f50;
+}
+
 /* FOR SEEING SECION - DO WILL REMOVE LATER */
 
 /* INTRODUCTIONS */
@@ -316,74 +386,7 @@ img {
 
 
 
-/* OTHER THINGS - JS class-adders */
 
-.dark-mode {
-	background-color: #002841;
-	color: #e7eff7;
-}
-
-.dark-mode-extra {
-	background-color: #2a2f50;
-}
-
-.dark-mode-extra a:visited {
-	color: #76748b;
-}
-
-.dark-mode-extra a:hover {
-	color: #5cada0;
-	text-underline-offset: 1px;
-}
-
-.dark-mode-extra a:active {
-	color: #633196;
-}
-
-.nav-container-dark {
-	background: #0a0e1c;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	color: #bde5e5;
-	font-weight: 500;
-	font-size: 24px;
-	padding: 0 16px;
-}
-
-.nav-container-dark a {
-	color: #62b4f3;
-	text-decoration: none;
-	padding: 2px 5px;
-	border-bottom: #c0daf3 2px solid;
-}
-
-.nav-container-dark a:hover {
-	color: #85949d;
-	text-decoration: none;
-	border-bottom: #003261 2px solid;
-}
-
-.button-dark {
-	background-color: #221943;
-	color: #e7eff7;
-	border: 1px solid #3a305f;
-}
-
-.button-dark:hover {
-	background-color: #554c2b;
-	color: #dbdbdb;
-}
-
-.button-dark:active {
-	background-color: #1d867b;
-}
-
-.show-rest {
-	display: block;
-}
-
-/* OTHER THINGS - JS class-adders END */
 
 
 /* MEDIA QUERIES MFers!! */

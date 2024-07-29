@@ -40,7 +40,7 @@ let themeButton = document.getElementById("theme-button");
 
 const toggleDarkMode = () => {
 	document.body.classList.toggle("dark-mode");
-console.log("hello")
+	console.log("hello")
 	let topBanner = document.getElementById("banner");
 	let navContainer = document.getElementById("nav-container");
 	let disclamer = document.getElementById("disclamer");
@@ -132,13 +132,13 @@ const submitRequest = () => {
 
 	// create counter
 	const sigCounter = document.getElementById("counter");
-	
+
 	let subCount = () => {
 		let count = parseInt(sigCounter.innerText);
 		count += 1;
 		sigCounter.innerText = count;
 	}
-	
+
 	subCount();
 
 }
