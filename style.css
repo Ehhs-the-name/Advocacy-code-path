@@ -30,6 +30,8 @@ body {
 
 .top-banner h1 {
 	padding: 0 30px;
+	color: gold;
+	font-weight: bold;
 }
 
 #top-img {
@@ -104,14 +106,13 @@ a:active {
 	margin: 0 10%;
 }
 
+.main-content>* {
+	margin: 4% 0;
+}
+
 .smooth-nav-transition {
 	margin-top: 7%;
 }
-
-/*Put for testing scroll*/
-/* #quiz-option-4 {
-	padding-bottom: 1000px;
-} */
 
 
 /*Intro Stuff*/
@@ -120,7 +121,6 @@ a:active {
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	/* margin: 15px 5px ; */
 	/* padding: 5px 25px; */
 }
 
@@ -173,6 +173,7 @@ a:active {
 
 ul {
 	margin-left: 0.35rem;
+	margin-bottom: 1.5rem;
 }
 
 .stat-container {
@@ -194,11 +195,36 @@ ul {
 .quiz-question-container {
 	padding: 10px;
 	border: 1px solid cornflowerblue;
-	/*for seeing*/
-	background-color: #ffffff;
 	justify-content: space-between;
 	flex: 2;
+	/*for seeing*/
+	background-color: #ffffff;
 }
+
+/*Form things*/
+.signature-form-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	padding-bottom: 3%;
+}
+
+.sig-text {
+	/* padding-right: 10%; */
+	max-width: 60%;
+}
+
+.form-holder button {
+	margin-left: 5px;
+}
+
+.signature-class {
+	width: 40%;
+	padding: 0 2rem;
+}
+
+
 
 /* #quiz-img img{
 	max-width: 100%;
@@ -219,6 +245,7 @@ ul {
 
 
 /* !! BUTTONS !! */
+
 button {
 	padding: 10px;
 	border: none;
@@ -238,12 +265,10 @@ button:active {
 	background-color: #5ee4d6;
 }
 
-/* quiz button styling */
 .quiz-button-styling {
 	border-radius: 1px;
 	transition: all 0.2s ease;
 }
-
 
 /* !! BUTTONS - END !! */
 
@@ -266,7 +291,7 @@ button:active {
 /* QUIZ THINGS */
 .quiz-container {
 	border: 3px dashed green;
-	/*for seeing*/
+	/*for seeing
 }
 
 /* FOR SEEING SECION - END */
@@ -314,7 +339,6 @@ img {
 .dark-mode-extra a:active {
 	color: #633196;
 }
-
 
 .nav-container-dark {
 	background: #0a0e1c;
@@ -364,9 +388,14 @@ img {
 
 /* MEDIA QUERIES MFers!! */
 @media (max-width: 768px) {
+	.nav-container {
+		font-size: 20px;
+	}
+
 	.introducton {
 		flex-flow: column;
 	}
+
 	#intro-left {
 		padding-bottom: 56.25%
 	}
@@ -374,6 +403,17 @@ img {
 	.smooth-nav-transition {
 		margin-top: 20%;
 	}
-	
+
+	.signature-form-container {
+		flex-flow: column wrap;
+	}
+
+	.sig-text {
+		padding-right: 0;
+	}
+
+	.signature-class {
+		width: 100%;
+	}
 
 }

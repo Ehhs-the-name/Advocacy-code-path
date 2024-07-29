@@ -22,7 +22,7 @@
 
     <!-- Top Banner -->
     <div class="top-banner" id="banner">
-      <h1 style="color: gold;font-weight: bold;">Safety Starts with Mental health</h1>
+      <h1>Safety Starts with Mental Health</h1>
       <img id="top-img"
         src="https://npr.brightspotcdn.com/dims4/default/941cea7/2147483647/strip/true/crop/1024x719+0+0/resize/1760x1236!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkstx%2Ffiles%2F201808%2FMentalHealth_Flickr.jpg">
     </div>
@@ -36,18 +36,20 @@
         <a href="#quiz-question-container">Questions</a>
         <a href="#signature-form">Help a friend</a>
       </nav>
-      <button id="theme-button">Toggle Dark Mode</button>
+      <button id="theme-button">Theme Toggle</button>
   </header>
 
 
   <!-- START OF MAIN CONTENT -->
   <div class="main-content" id="main-content">
 
-    <!-- Introduction -->
+    <!-- Disclamer -->
     <div class="disclamer emphizise" id="disclamer">
       <p>If you or someone you know is in a crisis, please don't hesitate to reach either of following resources:</p>
       </p><u>988</u> or <u>800-273-8255</u></p>
     </div>
+
+    <!-- Introduction -->
     <div class="introducton">
       <div id="intro-left">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pLdGC6uxf6A?si=XLIC8Pn84hiDVYQH"
@@ -57,6 +59,7 @@
       </div>
 
       <div id="intro-text">
+        <h2>Mental Health in Youth Minority Groups</h2>
         <blockquote class="emphizise">Since 2017, suicide has been the second leading cause of death in those 10-19
           years old. –<a
             href="https://www.aacap.org/AACAP/Policy_Statements/2022/AACAP_Policy_Statement_Increased_Suicide_Among_Black_Youth_US.aspx"
@@ -71,6 +74,7 @@
 
     <!-- All of statisitcs -->
     <div class="main-stat-container" id="stats-container-id">
+      <h2>Statistics on Mental Health in Youth Minority Groups</h2>
       <div class="stats-big" id="stats-big">
         <p>Black transgender and nonbinary young people report disproportionate rates of suicide risk—<br><span
             class="emphizise">with 58% seriously considering suicide and 1 in 4 (25%) attempting suicide in the past
@@ -148,13 +152,14 @@
 
       </ul>
     </div>
+
     <!-- Quiz Section -->
     <div class="quiz-container">
       <div class="quiz-question-container" id="quiz-question-container">
+      <h2>Test your Knowlege on the Statistics!</h2>
         <div id="quiz-img">
           <!-- I want an image to change per question -->
           <img alt="Image listing the 5 Action steps for suicide prevention" src="./assets/ActionSteps.jpg">
-
         </div>
         <p>
           Pretend this video is an empty div for an image and a question to answer. Think, Buzzfeed quiz, but
@@ -172,39 +177,49 @@
         <button type="button" class="quiz-button-styling" id="quiz-option-4">D</button>
       </div>
 
-
-
     </div>
 
-    <div class="form-holder" id="form-holder">
-      <h1>Commit to helping a loved one!</h1>
-      <p></p>
+    <!-- Form Collecter Here :) -->
+    <div class="signature-form-container" id="signature-form-container">
+      <div class="sig-text">
+        <h2>Commit to helping a loved one!</h2>
+        <p>Mental Illness is sometimes called and an invisible affliction, but even though you can't see it, it doesn't
+          mean you can't help. A supportive community is a key factor in preventing suicide, and you have the power to
+          be a pillar of support. Reaching out shows the sufferer that they're not alone and that they don't have to be
+          going through it alone. Even if you don't personally know anyone who's presenting any risk factors, it doesn't
+          hurt to reach out to someone and let them know you're there for them. Whether it be a younger cousin, a niece or nephew, or a peer, you have the power to make a difference in their life by just reassuring them.</p>
+        <p>Sign the petition below to let the world know you're
+          comitted to caring about the the mental heath our youth.</p>
+        <span class="error" id="error-message">
+        </span>
+      <div class="form-holder" id="form-holder">
+        <form id="signature-form">
+          <!-- First Name -->
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="first name" placeholder="John" size="15">
 
-      <form id="signature-form">
-        <!-- First Name -->
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" placeholder="Give first name" required>
+          <!-- Last Name -->
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="last name" placeholder="Doe" size="15">
 
-        <!-- Last Name -->
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" placeholder="Give Last Name" required>
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="johnD@yahoo.co.uk">
 
-        <!-- Email // Song -->
-        <label for="email-box">Email:</label>
-        <input type="text" id="email-box" name="email" placeholder="Type Email" required>
-
-        <!-- Submit-->
-        <button type="submit">Commit to helping</button>
-
-      </form>
+          <!-- Submit-->
+          <button type="submit">Sign Now</button>
+        </form>
+      </div>
     </div>
+
 
     <div class="signature-class" id="signatures">
-      <h3>Submitted signatures: </h3>
-      <div id="counter"></div>
+      <h3>Submitted signatures:</h3>
+      <p>Total signatures: <span id="counter">0</span></p>
     </div>
+  </div>
 
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 
 
 </body>
