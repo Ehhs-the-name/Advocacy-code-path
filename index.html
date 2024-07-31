@@ -12,6 +12,7 @@
   <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="reset-webview.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,7 @@
         <a href="#signature-form">Help a friend</a>
       </nav>
       <button id="theme-button">Theme Toggle</button>
+      <button id="motion-button">Reduce Motion</button>
   </header>
 
 
@@ -73,90 +75,94 @@
     </div>
 
     <!-- All of statisitcs -->
-    <div class="main-stat-container" id="stats-container-id">
+    <div class="main-stat-container revealable" id="stats-container-id">
       <h2>Statistics on Mental Health in Youth Minority Groups</h2>
-      <div class="stats-big" id="stats-big">
-        <p>Black transgender and nonbinary young people report disproportionate rates of suicide risk—<br><span
-            class="emphizise">with 58% seriously considering suicide and 1 in 4 (25%) attempting suicide in the past
-            year.</span></p>
-        <!-- I'm biased as hell btw. only reason this stat is highlighted -->
-        <blockquote>–<a
-            href="https://www.thetrevorproject.org/resources/article/facts-about-lgbtq-youth-suicide/#:~:text=In%20particular%2C%20Black%20transgender%20and%20nonbinary%20young%20people%20report%20disproportionate%20rates%20of%20suicide%20risk%20%E2%80%94%20with%2058%25%20seriously%20considering%20suicide%20and%201%20in%204%20(25%25)%20attempting%20suicide%20in%20the%20past%20year.%C2%A0"
-            target="_blank">Trevor Project</a></blockquote>
-      </div>
-      <button type="button" class="dropdown-button-styling breakdown" id="stats-drop-button">See more</button>
-    </div>
-    <div class="stat-container" id="stats-breakdown">
-      <ul>
-        <li>LGBTQ+ youth are 4x more likely to attempt suicide than their peers.</li>
-        <li>The Trevor Project's 2023 survey found that 41% of LGBTQ+ youth have seriously considered suicide, about
-          half were trans and nonbinary.</li>
-        <li>The Trevor Poject's analysis of CDC data found:</li>
+        <div class="stats-big" id="stats-big">
+          <p>Black transgender and nonbinary young people report disproportionate rates of suicide risk—<br><span
+              class="emphizise">with 58% seriously considering suicide and 1 in 4 (25%) attempting suicide in the past
+              year.</span></p>
+          <!-- I'm biased as hell btw. only reason this stat is highlighted -->
+          <blockquote>–<a
+              href="https://www.thetrevorproject.org/resources/article/facts-about-lgbtq-youth-suicide/#:~:text=In%20particular%2C%20Black%20transgender%20and%20nonbinary%20young%20people%20report%20disproportionate%20rates%20of%20suicide%20risk%20%E2%80%94%20with%2058%25%20seriously%20considering%20suicide%20and%201%20in%204%20(25%25)%20attempting%20suicide%20in%20the%20past%20year.%C2%A0"
+              target="_blank">Trevor Project</a></blockquote>
+        </div>
+        <button type="button" class="dropdown-button-styling breakdown" id="stats-drop-button">See more</button>
+      <div class="stat-container" id="stats-breakdown">
         <ul>
-          <li>48% of Bi people considered while 27% attempted.</li>
-          <li>37% of Lesbian/Gay people considered while 19% attempted.</li>
-          <li>14% of Straight people considered while 6% attempted.</li>
-        </ul>
-        <li>2020 peer-reviewed study found that trans and non-binary youth were 2 to 2.5 times more likely to experience
-          serious contemplation of suicide compared to cisgender LGBQ+ peers.</li>
-        <li>A 2023 survey found that almost all LGBTQ+ youth that had BIPOC identities reported higher suicide attempt
-          rates than their peers.</li>
-        <ul>
-          <li>Indigenous youth who are two spirit/LGBTQ+ consistently report the hiest suicide risk rate.</li>
-        </ul>
-        <li>Some Risk factors for suicide in LGBTQ+ youth:</li>
-        <ul>
-          <li>Minority Stress: where anti-LGBTQ+ messages become internalized.</li>
+          <li>LGBTQ+ youth are 4x more likely to attempt suicide than their peers.</li>
+          <li>The Trevor Project's 2023 survey found that 41% of LGBTQ+ youth have seriously considered suicide, about
+            half were trans and nonbinary.</li>
+          <li>The Trevor Poject's analysis of CDC data found:</li>
           <ul>
-            <li>Examples include experiencing the following due to identity: Housing instabilities, physical harm,
-              identity change attempts by parents via conversation camps and the like.</li>
+            <li>48% of Bi people considered while 27% attempted.</li>
+            <li>37% of Lesbian/Gay people considered while 19% attempted.</li>
+            <li>14% of Straight people considered while 6% attempted.</li>
           </ul>
-        </ul>
-        <li>Some preventive factors for LGBTQ+ youth suicide:</li>
-        <ul>
-          <li> Identity-affirming spaces like homes and schools consistently lower suicide attempt rates for LGBTQ+
-            youth.</li>
-          <li>Trusted adults and supportive peers have led to reports of higher self-esteem in LGBTQ+ youth.</li>
-        </ul>
-
-        <li>An article on Pew Trust gives 3 strategies for combating the fact that from 2007 to 2020 the suicide rate
-          for black youth has risen 144%.</li>
-        <li>The 3 stratigies:</li>
-        <ul>
-          <li>Increase healthcare providers' understanding of the cultures they provide care to.</li>
-          <li>Research risk factors focusing on different minority identities.</li>
+          <li>2020 peer-reviewed study found that trans and non-binary youth were 2 to 2.5 times more likely to
+            experience
+            serious contemplation of suicide compared to cisgender LGBQ+ peers.</li>
+          <li>A 2023 survey found that almost all LGBTQ+ youth that had BIPOC identities reported higher suicide attempt
+            rates than their peers.</li>
           <ul>
-            <li>Research shows that black youth show symptoms of depression (a suicide risk factor) differently than
-              white peers.</li>
+            <li>Indigenous youth who are two spirit/LGBTQ+ consistently report the hiest suicide risk rate.</li>
+          </ul>
+          <li>Some Risk factors for suicide in LGBTQ+ youth:</li>
+          <ul>
+            <li>Minority Stress: where anti-LGBTQ+ messages become internalized.</li>
             <ul>
-              <li>Aggression and irritability present more for depression than sadness and a lack of interest in things.
-              </li>
-              <li>All relates to distrust of healthcare professionals due to centuries of exploration and abuse.</li>
+              <li>Examples include experiencing the following due to identity: Housing instabilities, physical harm,
+                identity change attempts by parents via conversation camps and the like.</li>
             </ul>
-            <li>Diagnostic criteria being created primarily around white people leads to misclassification and
-              inappropriate medical responses, increasing someone's suicide risk.</li>
           </ul>
-          <li>Black youth are often misdiagnosed when they experience suicidal tendencies.</li>
+          <li>Some preventive factors for LGBTQ+ youth suicide:</li>
           <ul>
-            <li>Still, less than 50% of youth go on outpatient after being in the ER for self-harm, and it's less for
-              Black youth.</li>
+            <li> Identity-affirming spaces like homes and schools consistently lower suicide attempt rates for LGBTQ+
+              youth.</li>
+            <li>Trusted adults and supportive peers have led to reports of higher self-esteem in LGBTQ+ youth.</li>
           </ul>
+
+          <li>An article on Pew Trust gives 3 strategies for combating the fact that from 2007 to 2020 the suicide rate
+            for black youth has risen 144%.</li>
+          <li>The 3 stratigies:</li>
+          <ul>
+            <li>Increase healthcare providers' understanding of the cultures they provide care to.</li>
+            <li>Research risk factors focusing on different minority identities.</li>
+            <ul>
+              <li>Research shows that black youth show symptoms of depression (a suicide risk factor) differently than
+                white peers.</li>
+              <ul>
+                <li>Aggression and irritability present more for depression than sadness and a lack of interest in
+                  things.
+                </li>
+                <li>All relates to distrust of healthcare professionals due to centuries of exploration and abuse.</li>
+              </ul>
+              <li>Diagnostic criteria being created primarily around white people leads to misclassification and
+                inappropriate medical responses, increasing someone's suicide risk.</li>
+            </ul>
+            <li>Black youth are often misdiagnosed when they experience suicidal tendencies.</li>
+            <ul>
+              <li>Still, less than 50% of youth go on outpatient after being in the ER for self-harm, and it's less for
+                Black youth.</li>
+            </ul>
+          </ul>
+          <li>Due to a 2019 report to Congress, funding for the study of suicide risk and preventive factors, like
+            stigma
+            and connectedness of communities, has increased.</li>
+
+          Points on the statistics on black youth and 3 strategies to counter suicide rates rising in the black youth
+          populous can apply to other races too. One of the reasons Two-Spirit Indigenous youth might be facing the
+          highest suicide risk rates is because of the intersections of minority stress they face and the lack of
+          specific
+          research into their situation.
+
         </ul>
-        <li>Due to a 2019 report to Congress, funding for the study of suicide risk and preventive factors, like stigma
-          and connectedness of communities, has increased.</li>
-
-        Points on the statistics on black youth and 3 strategies to counter suicide rates rising in the black youth
-        populous can apply to other races too. One of the reasons Two-Spirit Indigenous youth might be facing the
-        highest suicide risk rates is because of the intersections of minority stress they face and the lack of specific
-        research into their situation.
-
-      </ul>
+      </div>
     </div>
 
     <!-- Quiz Section -->
-    <div class="quiz-container">
+    <div class="quiz-container revealable">
       <div class="quiz-question-container" id="quiz-question-container">
-      <h2>Test your Knowlege on the Statistics!</h2>
+        <h2>Test your Knowlege on the Statistics!</h2>
         <div id="quiz-img">
           <!-- I want an image to change per question -->
           <img alt="Image listing the 5 Action steps for suicide prevention" src="./assets/ActionSteps.jpg">
@@ -187,39 +193,51 @@
           mean you can't help. A supportive community is a key factor in preventing suicide, and you have the power to
           be a pillar of support. Reaching out shows the sufferer that they're not alone and that they don't have to be
           going through it alone. Even if you don't personally know anyone who's presenting any risk factors, it doesn't
-          hurt to reach out to someone and let them know you're there for them. Whether it be a younger cousin, a niece or nephew, or a peer, you have the power to make a difference in their life by just reassuring them.</p>
+          hurt to reach out to someone and let them know you're there for them. Whether it be a younger cousin, a niece
+          or nephew, or a peer, you have the power to make a difference in their life by just reassuring them.</p>
         <p>Sign the petition below to let the world know you're
           comitted to caring about the the mental heath our youth.</p>
         <span class="error" id="error-message">
         </span>
-      <div class="form-holder" id="form-holder">
-        <form id="signature-form">
-          <!-- First Name -->
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="first name" placeholder="John" size="15">
+        <div class="form-holder" id="form-holder">
+          <form id="signature-form">
+            <!-- First Name -->
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="first name" placeholder="John" size="15">
 
-          <!-- Last Name -->
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="last name" placeholder="Doe" size="15">
+            <!-- Last Name -->
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="last name" placeholder="Doe" size="15">
 
-          <!-- Email -->
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="johnD@yahoo.co.uk">
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johnD@yahoo.co.uk">
 
-          <!-- Submit-->
-          <button type="submit">Sign Now</button>
-        </form>
+            <!-- Submit-->
+            <button type="submit">Sign Now</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="signature-toclass" id="signatures">
+        <h3>Submitted signatures:</h3>
+        <p>Total signatures: <span id="counter">0</span></p>
       </div>
     </div>
 
-
-    <div class="signature-class" id="signatures">
-      <h3>Submitted signatures:</h3>
-      <p>Total signatures: <span id="counter">0</span></p>
+    <div class= "modal" id="modal">
+      <div class="modal-content" id="modalContainer">
+        <div class="close-mover"><span class="close" id="close">x</span></div>
+        <p>Thank you <span id="modalName"></span> for making the commitment to help a loved one! They will appreciate it!</p>
+        <div class="modal-deco motal-deco-move" id="modalDeco">
+          <img src="./assets/smilly.png" alt="yellow smiley face" id="modalDecoImg">
+        </div>
+      </div>
+      
     </div>
-  </div>
 
-  <script src="index.js"></script>
+    <script src="index.js"></script>
 
 
 </body>

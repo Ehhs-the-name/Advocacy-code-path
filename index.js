@@ -1,6 +1,12 @@
 // Header nonsense
 window.onscroll = function() { myFunction() };
 
+function alwaysFixedNav() {
+	header.classList.remove("sticky");
+}
+
+window.addEventListener('load', alwaysFixedNav);
+
 var header = document.getElementById("nav-container");
 // var banner = document.getElementById("banner");
 var bannerHeight = document.getElementById('banner').offsetHeight;
@@ -20,7 +26,6 @@ function myFunction() {
 		mainContentContainer.classList.remove("smooth-nav-transition");
 	}
 }
-
 
 // button "show more" code
 // It works now :)
@@ -140,7 +145,139 @@ const submitRequest = () => {
 	}
 
 	subCount();
-
+	showModal(fName);
 }
 
 form.addEventListener("submit", validateForm);
+
+let animation = {
+	revealDistance: 150,
+	initialOpacity: 0,
+	transitionDelay: 0,
+	transitionDuration: '2s',
+	transitionProperty: 'all',
+	transitionTimingFunction: 'ease',
+}
+
+let revealableContainers = document.querySelectorAll(".revealable");
+let motionButton = document.getElementById("motion-button");
+let clicked = false;
+
+function reveal() {
+	for (let i = 0; i < revealableContainers.length; i++) {
+		let windowHeight = window.innerHeight;
+
+
+		let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+
+		// console.log(`Containers with the 'revealable' class are: ${revealableContainers[i]}`);
+		// reduceMotion(revealableContainers[i]);
+
+		if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+
+			revealableContainers[i].classList.add("active");
+
+			// console.log(`Active class has been added for ${revealableContainers[i]}!\n `)
+
+		} else {
+			revealableContainers[i].classList.remove("active");
+
+			// console.log(`Active class has been REMOVED for ${revealableContainers[i]}!\n `)
+
+		}
+	}
+}
+
+window.addEventListener('scroll', reveal);
+
+//Modal thing - Popup baybe 
+let modal = document.getElementById("modal");
+let modalContainer = document.getElementById("modalContainer");
+let modalName = document.getElementById("modalName");
+let closeBtn = document.getElementById("close");
+let deco = document.getElementById("modalDecoImg");
+
+function showModal(firstName) {
+	modalName.innerText = firstName;
+	modal.style.display = "block";
+
+	// fix spin function :(
+
+}
+
+
+
+let start = 1;
+let startY = 0
+let switchh = true;
+
+let myVar = setInterval(decoFun, 10);
+
+function decoFun() {
+	if ((0 < start <= 20) && switchh === true) {
+		start++;
+	}  else if (start === 19) {
+		switchh = !switchh;
+	} else if ((-20 > start > 0) && switchh == false) {
+		start--;
+	}
+
+	
+	deco.style.transform = `rotate(${start}deg)`;
+	console.log(`start is ${start} \nswitchh is ${switchh}`)
+}
+
+// rotate(${start}deg)
+
+// // VREMEMBER TO UNCOMMENT THIS!! v
+// setTimeout(() => {
+// 	modal.style.display = "none";
+// }, 10000);
+
+
+closeBtn.onclick = function() {
+	modal.style.display = "none";
+}
+
+modal.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}
+
+
+// // WILL ADD/FIX LATER
+// function reduceMotion(revealableContainer) {
+// 	clicked = !clicked;
+
+// 	console.log("the revealible container is " + revealableContainer.innerHTML + "\n");
+
+// 	if (clicked === true) {
+// 		revealableContainer.classList.add("no-motion");
+
+// 		// animation.transitionDuration = 'none';
+// 		// revealableContainer.classList.style.transition = animation.transitionDuration;
+// 		// console.log(animation.transitionDuration);
+
+// 		// animation.initialOpacity = 1;
+// 		// revealableContainer.style.opacity = animation.initialOpacity;
+// 		// console.log(animation.initialOpacity);
+// 	} else {
+// 		console.log("scrollin' as usual~\n ");
+// 		revealableContainer.classList.add("no-motion");
+// 	}
+
+// 	console.log("motion reduced, hopefully...." + "\nClicked is " + clicked);
+// }
+
+// motionButton.addEventListener('click', reduceMotion);
+
+// JQuery Ex :D
+// $(document).ready(function(){
+// 	$("#hide").click(function(){
+// 		$("p").hide();
+// 	});
+// 	$("#show").click(function(){
+// 		$("p").show();
+// 	});
+// });

@@ -23,8 +23,6 @@ body {
 	color: #e7eff7;
 }
 
-
-
 .dark-mode-extra a:visited {
 	color: #76748b;
 }
@@ -38,29 +36,7 @@ body {
 	color: #633196;
 }
 
-.nav-container-dark {
-	background: #0a0e1c;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	color: #bde5e5;
-	font-weight: 500;
-	font-size: 24px;
-	padding: 0 16px;
-}
 
-.nav-container-dark a {
-	color: #62b4f3;
-	text-decoration: none;
-	padding: 2px 5px;
-	border-bottom: #c0daf3 2px solid;
-}
-
-.nav-container-dark a:hover {
-	color: #85949d;
-	text-decoration: none;
-	border-bottom: #003261 2px solid;
-}
 
 .button-dark {
 	background-color: #221943;
@@ -100,6 +76,16 @@ body {
 	float: right;
 }
 
+.top-banner img {
+	min-width: 200px;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain
+}
+
+
+/* for some reason this isn't working anymore Prof V and Mr Schweig don't know what's up with it either :/ */
+
 .nav-container {
 	background: #4358ad;
 	display: flex;
@@ -126,6 +112,30 @@ body {
 	border-bottom: #003261 2px solid;
 }
 
+.nav-container-dark {
+	background: #16182d;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #bde5e5;
+	font-weight: 500;
+	font-size: 24px;
+	padding: 0 16px;
+}
+
+.nav-container-dark a {
+	color: #62b4f3;
+	text-decoration: none;
+	padding: 2px 5px;
+	border-bottom: #c0daf3 2px solid;
+}
+
+.nav-container-dark a:hover {
+	color: #85949d;
+	text-decoration: none;
+	border-bottom: #003261 2px solid;
+}
+
 #nav-dropdown {
 	display: flex;
 	flex-flow: row wrap;
@@ -134,14 +144,29 @@ body {
 	gap: 1.2rem;
 }
 
-
 .sticky {
 	position: fixed;
 	top: 0;
 	width: 100%;
 }
 
+.revealable {
+	position: relative;
+	transform: translateY(150px);
+	transition: all 2s ease;
+	opacity: 0;
+}
 
+.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.no-motion {
+	position: static;
+	transform: translateY(0);
+	opacity: 1;
+}
 
 /* OTHER THINGS */
 /*Define links in this order:*/
@@ -167,7 +192,7 @@ a:active {
 	margin: 0 10%;
 }
 
-.main-content>* {
+.main-content > * {
 	margin: 4% 0;
 }
 
@@ -240,6 +265,7 @@ ul {
 
 .stat-container {
 	display: none;
+	text-align: left;
 }
 
 .show-rest {
@@ -277,7 +303,6 @@ ul {
 }
 
 .sig-text {
-	/* padding-right: 10%; */
 	max-width: 60%;
 }
 
@@ -289,14 +314,6 @@ ul {
 	width: 40%;
 	padding: 0 2rem;
 }
-
-
-
-/* #quiz-img img{
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: content
-} */
 
 .quiz-choices {
 	flex-direction: column;
@@ -361,33 +378,66 @@ button:active {
 /* QUIZ THINGS */
 .quiz-container {
 	border: 3px dashed green;
-	/*for seeing
+	/*for seeing*/
 }
 
 /* FOR SEEING SECION - END */
 
-
-/* div {
-	display: flow-root;
-	padding: 25px;
-} */
-
-img {
-	min-width: 200px;
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: contain
+/* Modal things - pasted from music player project*/
+.modal {
+	 display: block; /* Hidden by default */
+	 position: fixed;
+	 z-index: 1;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 overflow: hidden;
+	 background-color: rgb(0, 5, 30,0.4);
+	 margin: 0;
+	 font-size: 1.5rem;
 }
 
-/* .left-side {
-	float: left;
-	/* padding-right: 3rem; 
-} */
+.modal-content {
+	background-color: #fefefe;
+	margin: 20% auto;
+	padding: 40px 60px;
+	border: 1px solid #283774;
+	border-radius: 2rem;
+	width: 35%;
+	max-height: 30%;
+	display: flex;
+}
 
+.close {
+	color: #1c225f;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+	 color: #65688b;
+	 text-decoration: none;
+	 cursor: pointer;
+}
 
+.close-mover {
+	position: relative;
+	right: 5%;
+	bottom: 28px;
+}
 
+.modal-deco {
+	padding-left: 40px;
+	align-self: center;
+}
 
+.modal-deco img {
+	width: 50px; 
+	/* transform: translateX(50px); */
+}
 
 /* MEDIA QUERIES MFers!! */
 @media (max-width: 768px) {
