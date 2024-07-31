@@ -190,7 +190,33 @@ function reveal() {
 
 window.addEventListener('scroll', reveal);
 
-//Modal thing - Popup baybe 
+//Modal thing - Popup baby B)
+
+let start = 1;
+let startY = 0
+let switchh = true;
+
+function decoFun() {
+	if (start <= 20 && switchh === true) {
+		start++;
+		startY--;
+	} else if (start === 21) {
+		switchh = false;
+		start--;
+		startY--
+	}
+	
+	if (start >= -20 && switchh === false) {
+		start--;
+		startY++;
+	} else if (start === -21 && switchh === false) {
+		switchh = true;
+		start++;
+		startY--;
+	}
+	deco.style.transform = `rotate(${start}deg)`;
+}
+
 let modal = document.getElementById("modal");
 let modalContainer = document.getElementById("modalContainer");
 let modalName = document.getElementById("modalName");
@@ -201,38 +227,12 @@ function showModal(firstName) {
 	modalName.innerText = firstName;
 	modal.style.display = "block";
 
-	// fix spin function :(
-
-}
-
-
-
-let start = 1;
-let startY = 0
-let switchh = true;
-
-let myVar = setInterval(decoFun, 10);
-
-function decoFun() {
-	if ((0 < start <= 20) && switchh === true) {
-		start++;
-	}  else if (start === 19) {
-		switchh = !switchh;
-	} else if ((-20 > start > 0) && switchh == false) {
-		start--;
-	}
-
+	setInterval(decoFun, 10);
 	
-	deco.style.transform = `rotate(${start}deg)`;
-	console.log(`start is ${start} \nswitchh is ${switchh}`)
+	setTimeout(() => {
+		modal.style.display = "none";
+	}, 8000);
 }
-
-// rotate(${start}deg)
-
-// // VREMEMBER TO UNCOMMENT THIS!! v
-// setTimeout(() => {
-// 	modal.style.display = "none";
-// }, 10000);
 
 
 closeBtn.onclick = function() {

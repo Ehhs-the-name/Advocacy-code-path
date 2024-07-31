@@ -63,10 +63,11 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	font-size: 28px;
+	gap: 25px
 }
 
 .top-banner h1 {
-	padding: 0 30px;
 	color: gold;
 	font-weight: bold;
 }
@@ -193,13 +194,17 @@ a:active {
 }
 
 .main-content > * {
-	margin: 4% 0;
+	margin: 6% 0;
 }
 
 .smooth-nav-transition {
-	margin-top: 7%;
+	margin-top: 9%;
 }
 
+
+h2 {
+	font-size: 2rem;
+}
 
 /*Intro Stuff*/
 .introducton {
@@ -247,6 +252,8 @@ a:active {
 /*Stats Stuff*/
 .main-stat-container {
 	text-align: center;
+	max-width: 90%;
+	margin: auto;
 }
 
 .stats-big {
@@ -288,10 +295,21 @@ ul {
 	padding: 10px;
 	border: 1px solid cornflowerblue;
 	justify-content: space-between;
-	flex: 2;
+	flex: 3;
 	/*for seeing*/
 	background-color: #ffffff;
 }
+
+.quiz-question-container img {
+	max-width: 100%;
+}
+
+#quiz-img {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
 
 /*Form things*/
 .signature-form-container {
@@ -385,7 +403,7 @@ button:active {
 
 /* Modal things - pasted from music player project*/
 .modal {
-	 display: block; /* Hidden by default */
+	 display: none; /* Hidden by default */
 	 position: fixed;
 	 z-index: 1;
 	 left: 0;
@@ -407,6 +425,7 @@ button:active {
 	width: 35%;
 	max-height: 30%;
 	display: flex;
+	content: contain;
 }
 
 .close {
@@ -435,14 +454,26 @@ button:active {
 }
 
 .modal-deco img {
-	width: 50px; 
+	width: 85px; 
 	/* transform: translateX(50px); */
 }
 
 /* MEDIA QUERIES MFers!! */
 @media (max-width: 768px) {
+	h2 {
+		font-size: 1.6rem;
+	}
+	
 	.nav-container {
 		font-size: 20px;
+	}
+
+	.nav-container > * {
+		margin: 15px;
+	}
+
+	.nav-container:last-child {
+		padding-right: 30px;
 	}
 
 	.introducton {
@@ -457,16 +488,29 @@ button:active {
 		margin-top: 20%;
 	}
 
+	.main-stat-container {
+		max-width: 100%;
+	}
+
 	.signature-form-container {
 		flex-flow: column wrap;
 	}
 
 	.sig-text {
 		padding-right: 0;
+		max-width: 100%;
 	}
 
 	.signature-class {
 		width: 100%;
 	}
+
+	img {
+		max-width: 100vmax;
+	}
+
+	/* .quiz-question-container img{
+		max-width: 100%;
+	} */
 
 }
