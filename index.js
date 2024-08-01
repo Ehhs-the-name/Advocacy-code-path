@@ -65,6 +65,8 @@ const toggleDarkMode = () => {
 		button.classList.toggle("button-dark");
 	});
 
+	let footer = document.getElementById("foot");
+	foot.classList.toggle("dark-mode-extra");
 }
 
 themeButton.addEventListener("click", toggleDarkMode);
@@ -227,21 +229,24 @@ function showModal(firstName) {
 	modalName.innerText = firstName;
 	modal.style.display = "block";
 
-	setInterval(decoFun, 10);
+	interval = setInterval(decoFun, 10);
 	
 	setTimeout(() => {
 		modal.style.display = "none";
+		clearInterval(interval);
 	}, 8000);
 }
 
 
 closeBtn.onclick = function() {
 	modal.style.display = "none";
+	clearInterval(interval);
 }
 
 modal.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
+		clearInterval(interval);
 	}
 }
 

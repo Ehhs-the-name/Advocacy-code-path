@@ -16,6 +16,17 @@ body {
 	background: rgb(37, 56, 142, 0.3);
 }
 
+/* Footer stuff */
+
+footer {
+	background-color: #24388a;
+	color: gold;
+	padding: 30px;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+
 
 /* OTHER THINGS - JS class-adders */
 .dark-mode {
@@ -83,6 +94,7 @@ body {
 	max-height: 100%;
 	object-fit: contain
 }
+
 
 
 /* for some reason this isn't working anymore Prof V and Mr Schweig don't know what's up with it either :/ */
@@ -212,7 +224,7 @@ h2 {
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	/* padding: 5px 25px; */
+	gap: 2.2rem;
 }
 
 .disclamer {
@@ -234,8 +246,6 @@ h2 {
 
 #intro-left {
 	padding: 10px;
-	border: 1px solid cornflowerblue;
-	/* ^ for seeing */
 	position: relative;
 	flex: 1;
 	width: 100%;
@@ -243,9 +253,6 @@ h2 {
 }
 
 #intro-text {
-	padding: 0 20px;
-	border: 1px solid cornflowerblue;
-	/*for seeing*/
 	flex: 1;
 }
 
@@ -258,10 +265,9 @@ h2 {
 
 .stats-big {
 	margin: 15px 5px;
-	border: 1px solid cornflowerblue;
-	/*for seeing*/
 	padding: 10px 40px;
 	background-color: #ffffff;
+	border-radius: 5px;
 }
 
 ul {
@@ -293,11 +299,10 @@ ul {
 
 .quiz-question-container {
 	padding: 10px;
-	border: 1px solid cornflowerblue;
 	justify-content: space-between;
 	flex: 3;
-	/*for seeing*/
-	background-color: #ffffff;
+	background-color: #fafaff;
+	border-radius: 8px 0 0 8px;
 }
 
 .quiz-question-container img {
@@ -308,6 +313,7 @@ ul {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+	text-align: center;
 }
 
 
@@ -376,30 +382,6 @@ button:active {
 .dark-mode-extra {
 	background-color: #2a2f50;
 }
-
-/* FOR SEEING SECION - DO WILL REMOVE LATER */
-
-/* INTRODUCTIONS */
-.introducton {
-	border: 3px dashed red;
-	/*for seeing*/
-}
-
-
-/* STATISITICS AREA */
-.main-stat-container {
-	border: 3px dashed blue;
-	/*for seeing*/
-}
-
-
-/* QUIZ THINGS */
-.quiz-container {
-	border: 3px dashed green;
-	/*for seeing*/
-}
-
-/* FOR SEEING SECION - END */
 
 /* Modal things - pasted from music player project*/
 .modal {
@@ -508,7 +490,7 @@ button:active {
 	img {
 		max-width: 100vmax;
 	}
-
+	
 	/* .quiz-question-container img{
 		max-width: 100%;
 	} */
