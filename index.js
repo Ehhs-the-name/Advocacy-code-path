@@ -2,28 +2,25 @@
 window.onscroll = function() { myFunction() };
 
 function alwaysFixedNav() {
-	header.classList.remove("sticky");
+	$(header).removeClass("sticky");
 }
 
 window.addEventListener('load', alwaysFixedNav);
 
 var header = document.getElementById("nav-container");
-// var banner = document.getElementById("banner");
 var bannerHeight = document.getElementById('banner').offsetHeight;
 const mainContentContainer = document.getElementById("main-content");
 var sticky = header.offsetTop;
 
-// console.log(mainContentContainer);
-
 function myFunction() {
 	if (window.scrollY > sticky + bannerHeight) {
-		header.classList.add("sticky");
+		$(header).addClass("sticky");
 		banner.style.visiblity = "hidden";
-		mainContentContainer.classList.add("smooth-nav-transition");
+		$(mainContentContainer).addClass("smooth-nav-transition");
 	}
 	else {
-		header.classList.remove("sticky");
-		mainContentContainer.classList.remove("smooth-nav-transition");
+		$(header).removeClass("sticky");
+		$(mainContentContainer).removeClass("smooth-nav-transition");
 	}
 }
 
@@ -33,7 +30,7 @@ let dropdown = document.getElementById("stats-drop-button");
 
 let showRest = () => {
 	let breakDown = document.getElementById("stats-breakdown");
-	breakDown.classList.toggle("show-rest");
+	$(breakDown).toggleClass("show-rest");
 	console.log("button clicked!!");
 }
 
@@ -178,14 +175,10 @@ function reveal() {
 		if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
 
 			revealableContainers[i].classList.add("active");
-
 			// console.log(`Active class has been added for ${revealableContainers[i]}!\n `)
-
 		} else {
 			revealableContainers[i].classList.remove("active");
-
 			// console.log(`Active class has been REMOVED for ${revealableContainers[i]}!\n `)
-
 		}
 	}
 }
@@ -199,24 +192,27 @@ let startY = 0
 let switchh = true;
 
 function decoFun() {
-	if (start <= 20 && switchh === true) {
-		start++;
-		startY--;
-	} else if (start === 21) {
-		switchh = false;
-		start--;
-		startY--
-	}
-	
-	if (start >= -20 && switchh === false) {
-		start--;
-		startY++;
-	} else if (start === -21 && switchh === false) {
-		switchh = true;
-		start++;
-		startY--;
-	}
-	deco.style.transform = `rotate(${start}deg)`;
+	deco.classList.add("animated-element");
+
+	// original rotate code:
+	// if (start <= 20 && switchh === true) {
+	// 	start++;
+	// 	startY--;
+	// } else if (start === 21) {
+	// 	switchh = false;
+	// 	start--;
+	// 	startY--
+	// }
+
+	// if (start >= -20 && switchh === false) {
+	// 	start--;
+	// 	startY++;
+	// } else if (start === -21 && switchh === false) {
+	// 	switchh = true;
+	// 	start++;
+	// 	startY--;
+	// }
+	// deco.style.transform = `rotate(${start}deg)`;
 }
 
 let modal = document.getElementById("modal");
@@ -227,55 +223,48 @@ let deco = document.getElementById("modalDecoImg");
 
 function showModal(firstName) {
 	modalName.innerText = firstName;
-	modal.style.display = "block";
+	$(".modal").show();
 
-	interval = setInterval(decoFun, 10);
-	
+	interval = setInterval(decoFun, 100);
+
 	setTimeout(() => {
-		modal.style.display = "none";
+		$(".modal").hide();
 		clearInterval(interval);
 	}, 8000);
 }
 
 
 closeBtn.onclick = function() {
-	modal.style.display = "none";
+	$(".modal").hide();
 	clearInterval(interval);
 }
 
 modal.onclick = function(event) {
 	if (event.target == modal) {
-		modal.style.display = "none";
+		$(".modal").hide();
 		clearInterval(interval);
 	}
 }
 
 
-// // WILL ADD/FIX LATER
-// function reduceMotion(revealableContainer) {
-// 	clicked = !clicked;
+function reduceMotion() {
+	clicked = !clicked;
 
-// 	console.log("the revealible container is " + revealableContainer.innerHTML + "\n");
+	for (let i = 0; i < revealableContainers.length; i++) {
+		if (clicked === true) {
+			$(revealableContainers[i]).addClass("no-motion");
+			motionButton.innerText = "Add Motion";
+		} else {
+			clicked = false;
+			$(revealableContainers[i]).removeClass("no-motion");
+			motionButton.innerText = "Reduce Motion";
+			console.log("scrollin' as usual~\n ");
+		}
+	}
+	console.log("motion reduced, hopefully...." + "\nClicked is " + clicked);
+}
 
-// 	if (clicked === true) {
-// 		revealableContainer.classList.add("no-motion");
-
-// 		// animation.transitionDuration = 'none';
-// 		// revealableContainer.classList.style.transition = animation.transitionDuration;
-// 		// console.log(animation.transitionDuration);
-
-// 		// animation.initialOpacity = 1;
-// 		// revealableContainer.style.opacity = animation.initialOpacity;
-// 		// console.log(animation.initialOpacity);
-// 	} else {
-// 		console.log("scrollin' as usual~\n ");
-// 		revealableContainer.classList.add("no-motion");
-// 	}
-
-// 	console.log("motion reduced, hopefully...." + "\nClicked is " + clicked);
-// }
-
-// motionButton.addEventListener('click', reduceMotion);
+motionButton.addEventListener('click', reduceMotion);
 
 // JQuery Ex :D
 // $(document).ready(function(){
