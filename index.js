@@ -57,13 +57,15 @@ const toggleDarkMode = () => {
 	statBig.classList.toggle("dark-mode-extra");
 	quizQuestionContainer.classList.toggle("dark-mode-extra");
 
-	// console.log(buttons.innerHTML);
+	// let navContainerLinks = navContainer.querySelectorAll("a");
+	
 	buttons.forEach(button => {
 		button.classList.toggle("button-dark");
 	});
-
-	let footer = document.getElementById("foot");
-	foot.classList.toggle("dark-mode-extra");
+	
+	$("#modalContainer").toggleClass("dark-mode");
+	
+	$("#foot").toggleClass("dark-mode-extra");
 }
 
 themeButton.addEventListener("click", toggleDarkMode);
@@ -112,29 +114,19 @@ const submitRequest = () => {
 	const email = document.getElementById("email").value;
 
 	const cFName = fName.charAt(0).toUpperCase() + fName.slice(1);
-
-
 	const cLName = lName.charAt(0).toUpperCase() + lName.slice(1);
 
 	console.log(`${fName} ${lName} with the ${email} email has signed the form!`);
 
 	const submission = `${cFName} ${cLName} has signed the form!`
 
-	// console.log(submission + " <- Thing to put in <p>");
-
-	// console.log(form.innerText + " <-- The things from the signature form.")
-
-	//grab signature's div
 	const signatures = document.getElementById("signatures");
 
-	// create new p tag
 	const sigContainer = document.createElement("p");
 
-	// add new p tag to the div and add submission message
 	signatures.appendChild(sigContainer);
 	sigContainer.innerHTML = submission;
 
-	// create counter
 	const sigCounter = document.getElementById("counter");
 
 	let subCount = () => {
@@ -166,19 +158,13 @@ function reveal() {
 	for (let i = 0; i < revealableContainers.length; i++) {
 		let windowHeight = window.innerHeight;
 
-
 		let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
-
-		// console.log(`Containers with the 'revealable' class are: ${revealableContainers[i]}`);
-		// reduceMotion(revealableContainers[i]);
 
 		if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
 
 			revealableContainers[i].classList.add("active");
-			// console.log(`Active class has been added for ${revealableContainers[i]}!\n `)
 		} else {
 			revealableContainers[i].classList.remove("active");
-			// console.log(`Active class has been REMOVED for ${revealableContainers[i]}!\n `)
 		}
 	}
 }
@@ -186,7 +172,6 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 
 //Modal thing - Popup baby B)
-
 let start = 1;
 let startY = 0
 let switchh = true;
@@ -258,20 +243,8 @@ function reduceMotion() {
 			clicked = false;
 			$(revealableContainers[i]).removeClass("no-motion");
 			motionButton.innerText = "Reduce Motion";
-			console.log("scrollin' as usual~\n ");
 		}
 	}
-	console.log("motion reduced, hopefully...." + "\nClicked is " + clicked);
 }
 
 motionButton.addEventListener('click', reduceMotion);
-
-// JQuery Ex :D
-// $(document).ready(function(){
-// 	$("#hide").click(function(){
-// 		$("p").hide();
-// 	});
-// 	$("#show").click(function(){
-// 		$("p").show();
-// 	});
-// });
